@@ -3,7 +3,7 @@ import { useSignal } from "@preact/signals";
 import { ComponentChildren } from "preact";
 import { useEffect, useState } from "preact/hooks";
 
-interface Props {
+export interface Props {
   onClose?: () => void;
   open?: boolean;
   class?: string;

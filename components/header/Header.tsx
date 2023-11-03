@@ -6,6 +6,7 @@ import type { SiteNavigationElement } from "apps/commerce/types.ts";
 import Alert from "./Alert.tsx";
 import Navbar from "./Navbar.tsx";
 import { headerHeight } from "./constants.ts";
+import Tidio from "$store/islands/Tidio.tsx";
 
 export interface Props {
   alerts: string[];
@@ -48,6 +49,7 @@ function Header({
               logo={logo}
             />
           </div>
+          <Tidio code="ptefp45omnithjmsb95itb2satoiyglt" />
         </Drawers>
       </header>
     </>

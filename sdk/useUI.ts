@@ -9,12 +9,14 @@ const displayCart = signal(false);
 const displayMenu = signal(false);
 const displaySearchPopup = signal(false);
 const displaySearchDrawer = signal(false);
+const displayExitPopup = signal(false);
 
 const state = {
   displayCart,
   displayMenu,
   displaySearchPopup,
   displaySearchDrawer,
+  displayExitPopup,
 };
 
 // Keyboard event listeners
@@ -24,6 +26,10 @@ addEventListener("keydown", (e: KeyboardEvent) => {
   // Open Searchbar on meta+k
   if (e.metaKey === true && isK) {
     displaySearchPopup.value = true;
+  }
+
+  if (e.key === "Escape") {
+    displayExitPopup.value = true;
   }
 });
 

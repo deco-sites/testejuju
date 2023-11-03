@@ -7,6 +7,7 @@ import Alert from "./Alert.tsx";
 import Navbar from "./Navbar.tsx";
 import { headerHeight } from "./constants.ts";
 import Tidio from "$store/islands/Tidio.tsx";
+import ExitIntent from "$store/islands/strategy/ExitIntent.tsx";
 
 export interface Props {
   alerts: string[];
@@ -42,6 +43,7 @@ function Header({
           platform={platform}
         >
           <div class="bg-base-100 fixed w-full z-50">
+            <ExitIntent />
             <Alert alerts={alerts} />
             <Navbar
               items={items}

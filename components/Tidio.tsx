@@ -5,7 +5,9 @@ export interface Props {
 }
 
 export default function Tidio({ code }: Props) {
-  return <Head>
-    <script src={`//code.tidio.co/${code}.js`} async></script>
-  </Head>;
+  return (
+    <Head>
+      <script src={`//code.tidio.co/${code}.js`} async></script>
+    </Head>
+  );
 }
